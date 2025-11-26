@@ -15,7 +15,7 @@ class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         self.image = pygame.Surface((40, 40))
-        self.image.fill((0, 255, 255))  # NEW COLOR (cyan)
+        self.image.fill((0, 255, 255))  
         self.rect = self.image.get_rect(center=(WIDTH//2, HEIGHT//2))
 
     def update(self):
@@ -32,7 +32,7 @@ class Enemy(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         self.image = pygame.Surface((30, 30))
-        self.image.fill((255, 100, 100))  # NEW COLOR (soft red)
+        self.image.fill((255, 100, 100))  
         self.rect = self.image.get_rect()
         self.randomize_position()
 
@@ -71,4 +71,5 @@ while True:
 
     pygame.display.flip()
     clock.tick(60)
+
 
